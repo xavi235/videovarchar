@@ -1,0 +1,38 @@
+/* Estilo para el contenedor del slider */
+.slider-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Estilo para los puntos de navegación (dots) */
+  .slick-dots {
+    text-align: center;
+  }
+  
+  /* Estilo para cada punto de navegación */
+  .slick-dots li {
+    display: inline-block;
+    margin: 0 10px; /* Ajusta el margen según sea necesario */
+  }
+  
+  /* Estilo para los números de página en los puntos de navegación */
+  .slick-dots li button {
+    width: 30px;
+    height: 30px;
+    background-color: #070707; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    border: 2px solid #070707;
+    font-size: 16px;
+    line-height: 30px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Estilo para el punto de navegación activo */
+  .slick-dots li.slick-active button {
+    background-color: #fff; /* Color de fondo cuando está activo */
+    color: #007bff; /* Color del texto cuando está activo */
+  }
+  

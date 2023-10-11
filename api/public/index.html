@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mostrar Platillo y Video</title>
+</head>
+<body>
+  <h1>Platillo</h1>
+  <div id="platillo-info">
+    <!-- Aquí se mostrará la información del platillo -->
+  </div>
+
+  <h1>Video</h1>
+  <video id="video-player" controls autoplay>
+    <!-- El video se cargará aquí -->
+  </video>
+
+  <!-- Aquí se mostrará la imagen del platillo -->
+  <img id="imagen-platillo" alt="Imagen del Platillo">
+
+  <script>
+    // Realiza un GET para obtener la información del platillo
+    fetch('/mostrarPlatillos/page/1')
+      .then(response => response.json())
+      .then(data => {
+        // Extrae el ID codificado del platillo
+        const id_codificado = data.respuesta.id; // Asegúrate de usar la propiedad correcta aquí
+        console.log(data.respuesta);
+
+        // Configura la información del platillo en la página
+        const platilloInfo = document.getElementById('platillo-info');
+        platilloInfo.innerHTML = `
+          <p>Nombre: ${data.respuesta.nombre}</p>
+          <p>Descripción: ${data.respuesta.descripcion}</p>
+        `;
+
+        // Configura la fuente de la imagen del platillo
+        const imagenPlatillo = document.getElementById('imagen-platillo');
+        imagenPlatillo.src = data.respuesta.imagen;
+
+        // Luego de que el primer fetch termine, realiza el segundo fetch
+        return fetch(`/stream/${id_codificado}`);
+      })
+      .then(response => {
+        // Configura la fuente del reproductor de video
+        const videoPlayer = document.getElementById('video-player');
+        videoPlayer.src = response.url;
+      })
+      .catch(error => console.error('Error al obtener el platillo o el video:', error));
+  </script>
+</body>
+</html>

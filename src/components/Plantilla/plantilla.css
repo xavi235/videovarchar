@@ -1,0 +1,25 @@
+.selected-menu-item {
+  background-color: #31112C !important;
+  color: #fff !important;
+}
+
+.submenu-platillos {
+  background-color: #31112C !important;
+  color: #fff !important;
+}
+
+.menu-icon {
+  color: #fff !important;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+  background-color: #FBDCC4;
+  padding: 30px;
+}

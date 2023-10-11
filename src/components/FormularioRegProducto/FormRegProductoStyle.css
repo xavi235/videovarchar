@@ -1,0 +1,96 @@
+/* .c1{
+    background-color: aquamarine;
+}
+
+.c2{
+    background-color: blueviolet;
+} */
+
+.nombreArchivoSubido{
+  width: 31vw; /* Ancho máximo del contenedor */
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+  overflow: hidden; /* Oculta el texto que excede el ancho máximo */
+  text-overflow: ellipsis; /* Agrega puntos suspensivos para indicar que se ha truncado el texto */
+  color: black;
+}
+
+.botonRegistrar {
+  width: 10vw;
+  margin-left: 10vw;
+}
+
+.botonCancelar {
+  width: 10vw;
+  margin-left: 2vw;
+}
+
+
+.tituloRegistrar {
+  /* margin-left: 10vw; */
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+}
+
+
+
+.containerForm {
+  border: 2px outset #01c38e;
+  border-radius: 15px;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  /*background-color: aquamarine;*/
+  background-color: rgba(255, 255, 255, 0.33);
+  box-shadow: 0px 8px 32px 0 rbga(0, 0, 255, 0.3);
+  backdrop-filter: blur(6.5px);
+  border: 2px outset #01c38e;
+  border-radius: 15px;
+  position: relative;
+  z-index: 0;
+
+  .botonCancelar {
+    width: 25vw;
+    margin-left: 4vw;
+  }
+
+  .botonCancelar {
+    width: 25vw;
+    margin-left: 4vw;
+  }
+
+
+  .botonCancelar {
+    width: 25vw;
+    margin-left: 4vw;
+  }
+
+
+  .botonCancelar {
+    width: 25vw;
+    margin-left: 4vw;
+  }
+
+  .botonCancelar {
+    width: 25vw;
+    margin-left: 4vw;
+  }
+
+
+  .botonCancelar {
+    width: 22vw;
+    margin-left: 4vw;
+  }
+
+
+/*Este afecta a tablet landscape*/
+
+
+  .botonCancelar {
+    width: 25vw;
+    margin-left: 4vw;
+  }
+
+  .botonCancelar {
+    width: 25vw;
+    margin-left: 4vw;
+  }
+}
